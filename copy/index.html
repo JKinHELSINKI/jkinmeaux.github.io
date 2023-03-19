@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-        <title>Kawa</title>
+        <title>フレーム模写</title>
         <style>
             /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
             *,::after,::before{box-sizing:border-box;border-style:solid;border-width:0}html{line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}address,blockquote,body,dl,figure,form,iframe,ol,p,pre,table,ul{margin:0}details,main{display:block}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;margin:0}ol,ul{padding:0;list-style:none}dt{font-weight:700}dd{margin-left:0}a,hr{color:inherit}hr{box-sizing:content-box;height:0;overflow:visible;border-top-width:1px;margin:0;clear:both}code,kbd,pre,samp{font-family:monospace,monospace;font-size:inherit}address{font-style:inherit}a{background-color:transparent;text-decoration:none}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}embed,iframe,img,object,svg{vertical-align:bottom}button,input,optgroup,select,textarea{-webkit-appearance:none;appearance:none;vertical-align:middle;color:inherit;font:inherit;background:0 0;padding:0;margin:0;border-radius:0;text-align:inherit;text-transform:inherit}[type=button],[type=reset],[type=submit],button,label[for]{cursor:pointer}[type=button]:disabled,[type=reset]:disabled,[type=submit]:disabled,button:disabled{cursor:default}:-moz-focusring{outline:auto}select:disabled{opacity:inherit}fieldset,legend,option{padding:0}fieldset{margin:0;min-width:0}progress{vertical-align:baseline}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=number]{-moz-appearance:textfield}summary{display:list-item}[contenteditable]:focus{outline:auto}table{border-color:inherit;border-collapse:collapse}caption{text-align:left}td,th{vertical-align:top;padding:0}th{text-align:left;font-weight:700}
@@ -19,10 +19,7 @@
                 font-size: xx-large;
             }
             body{
-                background: linear-gradient(white, red)no-repeat;
-                min-height: 100vh;
-                max-width: 1000px;
-                margin:auto;
+                margin: auto;
             }
             .equilateral-triangle {
                 border-bottom: 150px solid #43A047; /* 高さ */
@@ -32,21 +29,21 @@
             #triangle1{
                 position: absolute;
                 top: 95%;
-                right: 30px;
+                right: 130px;
                 transform: rotate(45deg);
                 z-index: -1;
             }
             #triangle2{
                 position: absolute;
                 top: 265%;
-                left: 10px;
+                left: 110px;
                 filter: hue-rotate(90deg);
                 z-index: -1;
             }
             #triangle3{
                 position: absolute;
                 top: 275%;
-                right: 30px;
+                right: 130px;
                 transform: rotate(30deg);
                 filter: hue-rotate(180deg);
                 z-index: -1;
@@ -65,6 +62,7 @@
             #head{
                 background-color: white;
                 height: 50px;
+                display: flex;
             }
             h2{
                 display: block;
@@ -76,9 +74,45 @@
                 -webkit-text-stroke: 2px black;
                 text-stroke: 2px black;
             }
-            main{
-                display: block;
-                width: 100%;
+            section{
+                width: 100vw;
+                z-index: -2;
+            }
+            #section1{
+                background: linear-gradient(white, red)no-repeat;
+            }
+            #section2{
+                background: blue;
+                padding-bottom: 10vw;
+            }
+            #section2::before{
+                bottom: 100%;
+                border-width: 0 0 6vw 100vw;
+                border-color: transparent transparent blue transparent;
+                content: "";
+                left: 0;
+                position: relative;
+                top: -6vw;
+                z-index: -2;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+            #section3{
+                background: white;
+            }
+            #section3::before{
+                bottom: 100%;
+                border-width: 0 0 6vw 100vw;
+                border-color: transparent transparent white transparent;
+                content: "";
+                left: 0;
+                position: relative;
+                top: -6vw;
+                z-index: -2;
+                width: 0;
+                height: 0;
+                border-style: solid;
             }
             #key-v{
                 width: 100%;
@@ -86,8 +120,8 @@
             }
             #key-c{
                 position: absolute;
-                left:calc(10px+1vw);
-                top: 80%;
+                left: 10vw;
+                top: 70%;
                 border-radius: 10px;
                 background-color: aliceblue;
                 width: 400px;
@@ -103,7 +137,7 @@
                 font-weight: bolder;
             }
             .container{
-                width: calc(100%/2);
+                width: 400px;
                 min-width: 400px;
                 padding: 10px;
                 margin: auto;
@@ -120,7 +154,7 @@
                 border-bottom: solid 2px black;
             }
             @media screen and (min-width:768px){
-                main{
+                section{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -224,6 +258,9 @@
                 background-color: gray;
                 color: white;
             }
+            /*
+            先頭に戻るボタン
+            */
             .pagetop{
                 height: 80px;
                 width: 80px;
@@ -270,133 +307,143 @@
             </div>
         </header>
         <main>
-            <div id="key-v">
-                <div id="key-c">
+            <section id="section1">
+                <div id="key-v">
+                    <div id="key-c">
+                    </div>
+                    <div id="key-h">
+                        <h1>フレーム模写</h1>
+                    </div>
                 </div>
-                <div id="key-h">
-                    <h1>写経</h1>
+            </section>
+            <section id="section2">
+                <h2>TRACK LIST</h2>
+                <div class="container height300">
+                    <p>01</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <h2>TRACK LIST</h2>
-            <div class="container height300">
-                <p>01</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>02</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>02</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>03</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>03</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>04</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>04</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>05</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>05</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>06</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>06</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>07</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>07</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                <div class="container height300">
+                    <p>08</p>
+                    <div>
+                    <h3>XXX</h3>
+                    <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container height300">
-                <p>08</p>
-                <div>
-                <h3>XXX</h3>
-                <p>AAA BBB CCC DDD EEE FFF GGG HHH III JJJ KKK</p>
+            </section>
+            <section id="section3">
+                <h2>STAFF LIST</h2>
+                <div class="container staff">
+                    <dl>
+                        <dt>ABC</dt>
+                        <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
+                    </dl>
                 </div>
-            </div>
-            <h2>STAFF LIST</h2>
-            <div class="container staff">
-                <dl>
-                    <dt>ABC</dt>
-                    <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
-                </dl>
-            </div>
-            <div class="container staff">
-                <dl>
-                    <dt>ABC</dt>
-                    <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
-                </dl>
-            </div>
-            <div class="container staff">
-                <dl>
-                    <dt>ABC</dt>
-                    <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
-                </dl>
-            </div>
-            <div class="container staff">
-                <dl>
-                    <dt>ABC</dt>
-                    <dd><a href="">XXXXX</a></dd>
-                </dl>
-            </div>
-            <h2>ITEMS</h2>
-            <div class="rows2-3">
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
+                <div class="container staff">
+                    <dl>
+                        <dt>ABC</dt>
+                        <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
+                    </dl>
                 </div>
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
+                <div class="container staff">
+                    <dl>
+                        <dt>ABC</dt>
+                        <dd><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a><a href="">XXXXX</a></dd>
+                    </dl>
                 </div>
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
+                <div class="container staff">
+                    <dl>
+                        <dt>ABC</dt>
+                        <dd><a href="">XXXXX</a></dd>
+                    </dl>
                 </div>
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
+            </section>
+            <section>
+                <h2>ITEMS</h2>
+                <div class="rows2-3">
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
+                    <div class="items-box">
+                        <a href=""><div class="img"></div></a>
+                        <p>AAABBBCCC</p>
+                    </div>
                 </div>
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
+            </section>
+            <section>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="items-box">
-                    <a href=""><div class="img"></div></a>
-                    <p>AAABBBCCC</p>
-                </div>
-            </div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide ４</div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+            </section>
         </main>
         <footer>
             <p>(C)</p>
@@ -417,6 +464,7 @@
                 returnTop.classList.remove('pageTopBtnActive');
             }
             });
+            //Swiper
             const swiper = new Swiper(".swiper", {
             spaceBetween: 50,
             pagination: {
