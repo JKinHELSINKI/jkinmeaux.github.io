@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+Noindex: /
+Nofollow: /
+Noarchive: /
+Nosnippet: /
+Noydir: /
+Noodp: /

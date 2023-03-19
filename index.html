@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/lay.css">
+        <title>J.K.'s Web Site</title>
+    </head>
+    <body>
+        <header>
+            <div id="head">
+                <video muted autoplay loop src="assets/images/head.mp4"></video>
+                <div id="headlay">
+                </div>
+                <h1 id="title" class="outlined shitaFuwaAnimation"><span>J.K.'s</span> <span>Web Site</span></h1>
+                <p class="shitaFuwaAnimation" style="text-align:center"><span class="outlined">By J.K.</span>
+            </div>
+            <div class="hamburgermenu">
+                <input type="checkbox" id="menubuttoncheck">
+                <label for="menubuttoncheck" class="menubutton"><span></span></label>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#first" class="menubuttonclick">はじめに</a>
+                        </li>
+                        <li>
+                            <a href="#images" class="menubuttonclick">画像</a>
+                        </li>
+                        <li>
+                            <a href="#twitter" class="menubuttonclick">CSS製偽Twitter</a>
+                        </li>
+                        <!-- <li>
+                            <a target="_blank" onclick="window.open('contact.html','','width=600,height=600,status=yes,resizable=yes,scrollbars=yes');return false;" style="cursor:pointer" class="menubuttonclick">お問い合わせ</a>
+                        </li> -->
+                        <li>
+                            <a href="#others" class="menubuttonclick">その他</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article>
+            <section id="first">
+                <h2 title="Images" class="accordion shitaFuwaAnimation"><label for="images">はじめに</label></h2>
+                <div class="accordioncontent container">
+                    <p>　<span class="jshighlighter" title="伸縮するメニューバー。">アコーディオン</span>と<span class="jshighlighter" title="3本線のメニュー呼び出しアイコン。">ハンバーガーメニュー</span>（横幅が小さい場合）と<span class="jshighlighter" title="画像を独立窓で表示。">モーダル</span>と<span class="jshighlighter" title="縦にイベントが目につく。">パララックス</span>の合わせ盛りです。UXの良さはあえて捨てて機能盛りを重視しました。</p>
+                </div>
+                </section>
+            <section id="images">
+            <h2 title="Images" class="accordion shitaFuwaAnimation"><label for="images">画像</label></h2>
+            <div class="accordioncontent">
+                <h3>寿司</h3>
+                <div class="modalsthumbarea">
+                    <a href="assets/images/q60.jpg" data-lightbox="artwork" data-title=""><img src="assets/images/q60t.jpg" alt="" class="modalsthumb"></img></a>
+                    <a href="assets/images/q62.jpg" data-lightbox="artwork" data-title=""><img src="assets/images/q62t.jpg" alt="" class="modalsthumb"></img></a>
+                    <a href="assets/images/q63.jpg" data-lightbox="artwork" data-title="スシローまいど盛り"><img src="assets/images/q63t.jpg" alt="" class="modalsthumb"></img></a>
+                    <a href="assets/images/q64.jpg" data-lightbox="artwork" data-title=""><img src="assets/images/q64t.jpg" alt="" class="modalsthumb"></img></a>
+                </div>
+            </div>
+            </section>
+            <section id="twitter">
+            <h2 title="CSS製偽Twitter" class="accordion shitaFuwaAnimation"><label for="Twitter">CSS製偽Twitter</label></h2>
+            <div class="accordioncontent container">
+                <iframe name="diary" id="diarybox" src="assets/diary.html"></iframe>
+            </div>
+            </section>
+            <section id="others">
+                <h2 title="Others" class="accordion shitaFuwaAnimation"><label for="others">その他</label></h2>
+                <div class="accordioncontent container">
+                    <ul>
+                        <li><a href="copy">写経</a>。</li>
+                    </ul>
+                </div>
+                </section>
+            <section id="images">
+        </article>
+        <footer>
+            <p>Copyright (C) J.K.</p>
+        </footer>
+        <section id="back">
+            <p class="nomargin backcredit">
+                <span class="outlined" style="font-size:small"><a href="http://www.pakutaso.com">写真素材 ぱたくそ</a></span>
+            </p>
+        </section>
+        <section id="back2"> 
+            <p class="nomargin backcredit">
+                <span class="outlined" style="font-size:small"><a href="http://www.pakutaso.com">写真素材 ぱたくそ</a></span>
+            </p>
+        </section>
+        <iframe src="assets/analysis.html" style="display:none;position:absolute;border:none;width:0;height:0"><!--アナライズ用（不要）--></iframe>
+        <script src="assets/js/combined.js"></script>
+    </body>
+</html>
