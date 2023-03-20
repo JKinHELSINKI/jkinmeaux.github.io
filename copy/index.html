@@ -19,7 +19,7 @@
                 font-size: xx-large;
             }
             body{
-                margin: auto;
+                margin: 0 auto;
             }
             .equilateral-triangle {
                 border-bottom: 150px solid #43A047; /* 高さ */
@@ -80,39 +80,40 @@
             }
             #section1{
                 background: linear-gradient(white, red)no-repeat;
-            }
-            #section2{
-                background: blue;
-                padding-bottom: 10vw;
+                z-index: -20;
             }
             #section2::before{
                 bottom: 100%;
                 border-width: 0 0 6vw 100vw;
-                border-color: transparent transparent blue transparent;
+                border-color: transparent transparent blue;
                 content: "";
                 left: 0;
                 position: relative;
                 top: -6vw;
-                z-index: -2;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+            #section2{
+                background: blue;
+                padding-bottom: 10vw;
+                z-index: -19;
+            }
+            #section3::before{
+                bottom: 100%;
+                border-width: 0 0 6vw 100vw;
+                border-color: transparent transparent white;
+                content: "";
+                left: 0;
+                position: relative;
+                top: -5.9vw;
                 width: 0;
                 height: 0;
                 border-style: solid;
             }
             #section3{
                 background: white;
-            }
-            #section3::before{
-                bottom: 100%;
-                border-width: 0 0 6vw 100vw;
-                border-color: transparent transparent white transparent;
-                content: "";
-                left: 0;
-                position: relative;
-                top: -6vw;
-                z-index: -2;
-                width: 0;
-                height: 0;
-                border-style: solid;
+                z-index: -18;
             }
             #key-v{
                 width: 100%;
