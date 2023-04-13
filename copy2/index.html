@@ -238,9 +238,6 @@ h3{
     background-color: lightpink;
     color: white;
     display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     padding: .1em 1em 0;
     font-size: 5vh;
     line-height: 1.3;
@@ -312,6 +309,10 @@ h3{
 .delicioushandrawn{font-family: 'Delicious Handrawn', cursive;}
 .hachimarupop{font-family: 'Hachi Maru Pop', cursive;}
 .ymogi{font-family: 'Yomogi', cursive;}
+.shitaFuwaAnimation{opacity:0;visibility:hidden;transition:1s;transform:translateY(30px)}
+.transition3{transition:3s}
+.delay1{-webkit-transition-delay:1s;transition-delay:1s}
+.shitaFuwaActive{opacity:1;visibility:visible;transform:translateY(0)}
         </style>
     </head>
     <body>
@@ -325,16 +326,16 @@ h3{
                 <p id="scroll" class="delagothic1">SCROLL</p>
                 <div id="bg1">
                     <div id="wrap1">
-                        <div id="titlea">
+                        <div id="titlea" class="shitaFuwaAnimation">
                             <p class="hachimarupop">AAAAAA BBBBBBBBB CCCCCCC</p>
                             <p class="hachimarupop">DDDDD EEEEEEE FFFFFFFFF</p>
                             <h1>AAA BBB</h1>
                         </div>
-                        <p class="hachimarupop"><span class="titleb">DDDDD EEEEEEE FFFFFFFFF</span></p>
-                        <p class="hachimarupop"><span class="titleb">GGGGG HHHHHH IIII</span></p>
-                        <p class="hachimarupop"><span class="titleb">JJJJJJ KKKKKKKK LLLLLL MMMMMM</span></p>
+                        <p class="hachimarupop shitaFuwaAnimation transition3"><span class="titleb">DDDDD EEEEEEE FFFFFFFFF</span></p>
+                        <p class="hachimarupop shitaFuwaAnimation transition3"><span class="titleb">GGGGG HHHHHH IIII</span></p>
+                        <p class="hachimarupop shitaFuwaAnimation transition3"><span class="titleb">JJJJJJ KKKKKKKK LLLLLL MMMMMM</span></p>
                     </div>
-                    <div id="titlec">
+                    <div id="titlec" class="shitaFuwaAnimation transition3 delay1">
                         <p class="alkatra"><span class="titled">OOOOOO PPPPP</span></p>
                         <p class="alkatra"><span class="titled">QQQQQ RRR</span></p>
                         <p class="alkatra"><span class="titled">SSSSSSSSSSS</span></p>
@@ -344,59 +345,59 @@ h3{
             <section class="sectionmargin">
                 <div id="bg2">
                 </div>
-                <h2>New release</h2>
-                <h3>AAA BBB CCC</h3>
-                <p class="textaligncenter"><span class="titlee">AAAA BBBBBB CCCCCCCC</span></p>
-                <p class="textaligncenter"><span class="titlee">DDDDDD EEEEE FFFFF</span></p>
-                <p class="textaligncenter"><span class="titlee">GGGGG HHHHHHHH IIIIIII</span></p>
+                <h2 class="shitaFuwaAnimation">New release</h2>
+                <h3 class="shitaFuwaAnimation">AAA BBB CCC</h3>
+                <p class="textaligncenter shitaFuwaAnimation"><span class="titlee">AAAA BBBBBB CCCCCCCC</span></p>
+                <p class="textaligncenter shitaFuwaAnimation"><span class="titlee">DDDDDD EEEEE FFFFF</span></p>
+                <p class="textaligncenter shitaFuwaAnimation"><span class="titlee">GGGGG HHHHHHHH IIIIIII</span></p>
                 <div class="flexrowpc">
-                    <div id="titlef"></div>
-                    <div class="column">
+                    <div id="titlef" class="shitaFuwaAnimation"></div>
+                    <div class="column shitaFuwaAnimation">
                         <p class="titleg textaligncenter">JJJJJJ KKKKKK LLLLLLL<br>JJJJJJ KKKKKK LLLLLLL<br>JJJJJJ KKKKKK LLLLLLL</p>
                         <a id="titleh" href="">NNNNNNNN<i class="fa-solid fa-caret-right fa-shake" style="color: white"></i></a>
                     </div>
                 </div>
                 <div id="wrap2">
-                    <p class="hachimarupop titlei">ABCDEFGHIJKLMN<br class="brsp">OPQRSTUVWXYZ</p>
-                    <div id="titlej"></div>
-                    <p id="titlek" class="ymogi">AAAAAAAAA <br class="brpc">BBBBBBBBBBB <br class="brpc">CCCCCCCCCCCCCC <br class="brpc">DDDDDDDDDDDD <br class="brpc">EEEEEEEEEEEEEE <br class="brpc">FFFFFFFFFFFFFF <br class="brpc">GGGGGGGGGGGGG</p>
+                    <p class="hachimarupop titlei shitaFuwaAnimation">ABCDEFGHIJKLMN<br class="brsp">OPQRSTUV</p>
+                    <div id="titlej" class="shitaFuwaAnimation"></div>
+                    <p id="titlek" class="ymogi shitaFuwaAnimation">AAAAAAAAA <br class="brpc">BBBBBBBBBBB <br class="brpc">CCCCCCCCCCCCCC <br class="brpc">DDDDDDDDDDDD <br class="brpc">EEEEEEEEEEEEEE <br class="brpc">FFFFFFFFFFFFFF <br class="brpc">GGGGGGGGGGGGG</p>
                 </div>
             </section>
             <section class="sectionmargin">
-                <div id="bg3"></div>
-                <h2>Previous work</h2>
-                <h3>AAA BBB CCC</h3>
-                <p class="titlel">DDD EEE <strong>FFF</strong> GGG HHH III</p>
-                <div class="flex">
+                <div id="bg3" class="shitaFuwaAnimation"></div>
+                <h2 class="shitaFuwaAnimation">Previous work</h2>
+                <h3 class="shitaFuwaAnimation">AAA BBB CCC</h3>
+                <div class="textaligncenter"><p class="titlel shitaFuwaAnimation">DDD EEE <strong>FFF</strong> GGG HHH III</p></div>
+                <div class="flex shitaFuwaAnimation">
                     <div class="titlem"></div>
                     <div class="titlem"></div>
                     <div class="titlem"></div>
                 </div>
-                <p class="titlen">JJJKKKLLL</p>
+                <p class="titlen shitaFuwaAnimation">JJJKKKLLL</p>
                 <div class="flexrowpc">
-                    <div id="titleo"></div>
-                    <div class="column">
+                    <div id="titleo" class="shitaFuwaAnimation"></div>
+                    <div class="column shitaFuwaAnimation">
                         <p class="titlep">MMMMMMMNNNNNNNNNN</p>
                         <a id="titleh" href="">NNNNNNNN<i class="fa-solid fa-caret-right fa-shake" style="color: white"></i></a>
                     </div>
                 </div>
             </section>
             <section class="sectionmargin">
-                <h2>AAA BBB CCC</h2>
-                <h3>AAA BBB CCC</h3>
-                <p class="titlel">DDD EEE <strong>FFF</strong> GGG HHH III</p>
+                <h2 class="shitaFuwaAnimation">AAA BBB CCC</h2>
+                <h3 class="shitaFuwaAnimation">AAA BBB CCC</h3>
+                <div class="textaligncenter"><p class="titlel shitaFuwaAnimation">DDD EEE <strong>FFF</strong> GGG HHH III</p></div>
                 <div class="flexrowpc">
-                    <div class="column container1">
+                    <div class="column container1 shitaFuwaAnimation">
                         <p class="alkatra textaligncenter">JJJJKKKKLLLLMMMM</p>
                         <div class="titleq"></div>
                         <p class="alkatra textaligncenter">OOOPPPQQQRRR</p>
                     </div>
-                    <div class="column container1">
+                    <div class="column container1 shitaFuwaAnimation">
                         <p class="alkatra textaligncenter">JJJJKKKKLLLLMMMM</p>
                         <div class="titleq"></div>
                         <p class="alkatra textaligncenter">OOOPPPQQQRRR</p>
                     </div>
-                    <div class="column container1">
+                    <div class="column container1 shitaFuwaAnimation">
                         <p class="alkatra textaligncenter">JJJJKKKKLLLLMMMM</p>
                         <div class="titleq"></div>
                         <p class="alkatra textaligncenter">OOOPPPQQQRRR</p>
@@ -408,7 +409,7 @@ h3{
             <p id="footer" class="textaligncenter">(C)</p>
         </footer>
         <script src="https://kit.fontawesome.com/5bf4c76c7c.js" crossorigin="anonymous"></script>
-        <script>
+        <script src="../assets/js/combined.js">
         </script>
     </body>
 </html>
