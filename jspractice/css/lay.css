@@ -1,0 +1,84 @@
+body{
+--darkmodebackgroundcolor:black;
+--lightmodebackgroundcolor:white;
+--lightmodecolor:black;
+--darkmodecolor:white;
+}
+body{
+  -webkit-transition:all .3s linear;
+  transition:all .3s linear;
+  background-color:var(--lightmodebackgroundcolor);
+  color:var(--lightmodecolor);
+  display:flex;
+}
+
+img{
+  max-width:100%;
+}
+
+/*
+ダークモード
+*/
+body[id=darkmode]{
+  background-color:var(--darkmodebackgroundcolor);
+  color:var(--darkmodecolor);
+}
+
+.darkmodebutton,.lightmodebutton{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.darkmodebutton{
+  background-color:var(--darkmodebackgroundcolor);
+}
+.darkmodebutton .fa-moon{
+  color:var(--darkmodecolor);
+}
+.lightmodebutton{
+  background-color:var(--lightmodebackgroundcolor);
+}
+.lightmodebutton .fa-lightbulb{
+  color:var(--lightmodecolor);
+}
+
+/*
+Lightbox2
+*/
+#lightbox2 img{width:200px;height:200px;object-fit:cover;object-position:center center}
+
+/*
+粒子タイポグラフィー
+*/
+#particletypography .wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#particletypography .particletypography{
+  width:100%;
+  height:100%;
+  vertical-align:bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
+}
+
+/*
+ゆらゆらボックス
+*/
+.yuraboxarea{
+  position:relative;
+  height:20vh
+}
+.yurabox{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:blue;
+  width:100px;
+  height:100px;
+  margin:auto
+}
