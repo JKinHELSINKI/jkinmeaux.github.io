@@ -1,1 +1,1 @@
-[Web Site](https://jkinhelsinki.github.io)
+[Web Site](https://jkinkyoto.github.io)
